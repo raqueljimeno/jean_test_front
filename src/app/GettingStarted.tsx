@@ -51,10 +51,16 @@ const GettingStarted = () => {
         </p>
       </div>
       <div className="mb-3">
-        <CustomerAutocomplete value={customer} onChange={setCustomer} />
+        {/*         <CustomerAutocomplete value={customer} onChange={}/>
+         */}{' '}
       </div>
       <div className="mb-5">
-        <ProductAutocomplete value={product} onChange={setProduct} />
+        {/* <ProductAutocomplete
+          value={product}
+          onChange={() => {
+            setProduct(product)
+          }}
+        /> */}
       </div>
     </>
   )

@@ -4,18 +4,18 @@ import { AsyncPaginate } from 'react-select-async-paginate'
 import { Product } from 'types'
 import { useApi } from 'api'
 
-interface Props {
+interface ProductProps {
   value?: Product
-  onChange: (product: Product) => void
+  onChange: () => void
 }
 
 const defaultAdditional = { page: 1 }
 
-const ProductAutocomplete = ({ value, onChange }: Props) => {
+const ProductAutocomplete = ({ value, onChange }: ProductProps) => {
   const api = useApi()
 
   const loadOptions = useCallback(
-    async (search, loadedOptions, { page }) => {
+    async (search, _ , { page }) => {
       const { data } = await api.getSearchProducts({
         query: search,
         per_page: 10,

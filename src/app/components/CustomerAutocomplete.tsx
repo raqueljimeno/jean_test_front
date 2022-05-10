@@ -6,7 +6,7 @@ import { useApi } from 'api'
 
 interface Props {
   value?: Customer
-  onChange: (Customer: Customer) => void
+  onChange: () => void
 }
 
 const defaultAdditional = { page: 1 }
